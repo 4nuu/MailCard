@@ -4,12 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official Letter</title>
-
+    <title>Email Template</title>
     <style>
-        /* Changed to CSS Legacy from BS*/
+        body {
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
         .container {
-            width: 80%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,14 +22,14 @@
         }
 
         .card {
-            width: 60%;
+            width: 100%;
             max-width: 600px;
             background: #fff;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-top: 7px solid #130857;
-            border-bottom: 7px solid #130857;
+            border-top: 6px solid #130857;
+            border-bottom: 6px solid #130857;
         }
 
         .text-center {
@@ -36,8 +41,8 @@
         }
 
         .logo {
-            max-width: 70px;
-            width: 90%;
+            max-width: 120px;
+            width: 100%;
         }
 
         .powered-by {
@@ -52,55 +57,57 @@
             line-height: 1.6;
         }
 
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #555;
-        }
-
         @media (max-width: 768px) {
-            .card {
-                width: 90%;
-                padding: 12px;
-                left: 10px;
+            body {
+                padding: 25px;
                 position: relative;
+                top: 20px;
+                right: 6px;
             }
 
-            .content,.bottom-right {
-                font-size: 12px;
-                margin-bottom: 10px;
+            .container {
+                padding: 10px;
             }
 
-            .logo,
+            .card {
+                padding: 20px;
+                margin: 0 auto;
+            }
+
+            .content {
+                font-size: 14px;
+            }
+
+            .logo {
+                max-width: 100px;
+            }
+
             .powered-by {
-                max-width: 70px;
+                max-width: 80px;
             }
         }
     </style>
-
 </head>
 
-<body style=" margin: 0 ; padding: 0; background-color: #747474;">
+<body>
 
     <div class="container">
         <div class="card">
 
             <!-- top center -->
             <div class="text-center">
-                <img src="https://img.icons8.com/?size=100&id=85466&format=png&color=000000" alt="Company Logo" class="logo">
-                <p class="company">{{company_name}}</p>
+                <img src="{{logo_url}}" alt="Company Logo" class="logo">
             </div>
 
             <!-- Content -->
-            <p class="content">Dear <strong>{{client_name}}</strong>,</p>
+            <p class="content"><strong>Dear {{client_name}}</strong>,</p>
 
             <p class="content">{{content}}</p>
 
-            <!--Bottom Right -->
+            <!-- Bottom Right -->
             <div class="text-right">
-                <span class="bottom-right">Powered By,</span> <br>
-                <img src="https://codemehub.com/wp-content/uploads/2023/02/cropped-Codeme-new-logo-jpg-1-1-160x53.jpg"
-                    alt="Powered By" class="powered-by">
+                <p>Powered-by,</p>
+                <img src="{{powered_by_logo}}" alt="Powered By" class="powered-by">
             </div>
 
         </div>
