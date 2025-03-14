@@ -44,8 +44,6 @@
         .powered-by {
             max-width: 100px;
             width: 100%;
-            height: auto;
-            margin-top: 20px;
         }
 
         .content {
@@ -55,12 +53,6 @@
             margin: 20px 0;
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: #ddd;
-            margin: 20px 0;
-        }
 
         @media (max-width: 768px) {
             .container {
@@ -94,7 +86,6 @@
                 display: block;
                 font-size: 10px;
                 width: 60px;
-                margin-bottom: -10px;
             }
             .text-right span{
                 font-size: 14px;
@@ -113,7 +104,6 @@ align-items: center;">
             <div class="text-center">
                 <img src="{{logo.company_logo.url}}" alt="Company Logo" class="logo">
                 <p>{{service_name}}</p>
-                <hr>
             </div>
             {% endif %}
             <!-- Content -->
@@ -121,7 +111,6 @@ align-items: center;">
             <p class="content">{{content}}</p>
 
             <!-- Bottom Right -->
-            <hr>
             <div class="text-right">
                 <span>Powered by,</span> <br>
                 <img src="https://codemehub.com/wp-content/uploads/2023/02/cropped-Codeme-new-logo-jpg-1-1-160x53.jpg"
